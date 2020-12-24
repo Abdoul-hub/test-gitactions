@@ -19,7 +19,7 @@ jobs:
       os: [ubuntu-latest, windows-latest, macOs-latest]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
     - name: Set up JDK 1.8
       uses: actions/setup-java@v1
       with:
@@ -29,7 +29,7 @@ jobs:
     - name: Build and Push Docker image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-       image: cabraltogola/test-gitactions
+       image: cabraltogola/test-github-actions
        registry: docker.io
        dockerfile: Dockerfile
        username: ${{ secrets.DOCKER_USERNAME }}
