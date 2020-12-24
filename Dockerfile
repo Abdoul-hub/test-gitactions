@@ -1,4 +1,4 @@
-FROM cabraltogola/test-github-actions
+FROM cabraltogola/test-github-actions:v1
 
 LABEL maintainer="togolaabdoul@gmail.com"
 
