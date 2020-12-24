@@ -29,7 +29,7 @@ jobs:
     - name: Build and Push Docker image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-       image: cabraltogola/test-gitactions
+       image: cabraltogola/test-github-actions
        registry: docker.io
        dockerfile: Dockerfile
        username: ${{ secrets.DOCKER_USERNAME }}
