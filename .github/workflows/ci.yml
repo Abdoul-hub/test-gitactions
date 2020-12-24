@@ -31,7 +31,6 @@ jobs:
       with:
        image: cabraltogola/test-github-actions
        registry: docker.io
-       dockerfile: Dockerfile
        username: ${{ secrets.DOCKER_USERNAME }}
        password: ${{ secrets.DOCKER_PASSWORD }}
               
