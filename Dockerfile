@@ -1,5 +1,4 @@
-FROM docker.io/cabraltogola/test-github-actions:v1
-
+FROM openjdk:8 
 LABEL maintainer="togolaabdoul@gmail.com"
 
 VOLUME /tmp
