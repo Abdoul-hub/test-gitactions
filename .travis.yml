@@ -9,4 +9,4 @@ before_install:
     - docker build -t abdoul-hub/test-gitactions -f Dockerfile.dev .
     
 script:
-    - docker run abdoul-hub/test-gitactions
+    - docker run abdoul-hub/test-gitactions -d
