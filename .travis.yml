@@ -10,3 +10,17 @@ before_install:
     
 script:
     - docker run abdoul-hub/test-gitactions -d
+    
+deploy:
+    provider : elasticbeanstalk
+    region: "us-east-2"
+    app: "docker"
+    env: "Docker-env"
+    bucket_name: "elasticbeanstalk-us-east-2-644809867003"
+    bucket_path: "docker"   
+    on:
+        branch: main
+        
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key:
+        secure: "$AWS_SECRET_KEY"
