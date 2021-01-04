@@ -6,7 +6,7 @@ services :
     - docker
     
 before_install:
-    - docker build -t cabraltogola/test-github-actions
+    - docker build -t Abdoul-hub/test-gitactions -f Dockerfile.dev .
     
 script:
-    - docker run cabraltogola/test-github-actions
+    - docker run Abdoul-hub/test-gitactions
