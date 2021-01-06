@@ -1,7 +1,7 @@
 ## YAML Template.
 ---
 
-sudo : required
+sudo : true
 language: ruby
 install:
   - gem uninstall bundler
@@ -12,7 +12,6 @@ services :
     
 before_install:
     - docker build -t abdoul-hub/test-gitactions -f Dockerfile.dev .
-    - "rake"
     
 script:
     - docker run -d abdoul-hub/test-gitactions 
@@ -23,9 +22,9 @@ deploy:
     app: "docker"
     env: "Docker-env"
     bucket: "elasticbeanstalk-us-east-2-644809867003"
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: "$AWS_SECRET_KEY"
     bucket_path: "docker"   
     on:
         branch: main  
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key:
-        secure: "$AWS_SECRET_KEY"
+    
