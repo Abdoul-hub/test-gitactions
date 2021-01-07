@@ -18,12 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("homes")
 public class HomeController {
-    
-    
-    
-    
+
     @GetMapping("names")
-    public List<String> getName(){
+    public List<String> getName() {
         return Arrays.asList("Cabral est le meilleur", "Molo est con", "Mama est la petie soeur", "Papa fume du joint", "Dra fait son malin");
+    }
+
+    @GetMapping("hobbies")
+    public List<String> getHobbies() {
+        return Arrays.asList("Eat", "Sleep", "Code");
     }
 }

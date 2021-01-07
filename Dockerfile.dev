@@ -3,9 +3,11 @@ LABEL maintainer="togolaabdoul@gmail.com"
 
 VOLUME /tmp
 
+RUN mvn -B package --file pom.xml
+
 EXPOSE 8080
 
-COPY *.jar app.jar
+COPY target/*.jar app.jar
 
 CMD ["java","-jar","/app.jar"]
 
